@@ -1,0 +1,35 @@
+{
+  "name": "site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "vercel": "vercel"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@mantine/core": "^3.1.0",
+    "@mantine/hooks": "^3.1.0",
+    "@mantine/next": "^3.1.0",
+    "@mantine/notifications": "^3.1.0",
+    "autoprefixer": "^10.4.0",
+    "next": "12.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@modulz/radix-icons": "^4.0.0",
+    "@types/node": "16.11.6",
+    "@types/react": "17.0.33",
+    "eslint": "7",
+    "eslint-config-next": "12.0.1",
+    "postcss": "^8.3.11",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "2.2.17",
+    "typescript": "4.4.4"
+  }
+}
