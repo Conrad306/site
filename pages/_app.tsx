@@ -1,12 +1,23 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { MantineProvider, NormalizeCSS, GlobalStyles, Drawer, ActionIcon, ColorScheme, ColorSchemeProvider, Burger} from '@mantine/core'
+import {
+    MantineProvider,
+    NormalizeCSS,
+    GlobalStyles,
+    Drawer,
+    ActionIcon,
+    ColorScheme,
+    ColorSchemeProvider,
+    Burger,
+    Text,
+    Group
+} from '@mantine/core'
 import { useLocalStorageValue } from '@mantine/hooks'
 import { useEffect, useState } from 'react'
 import { NotificationsProvider } from '@mantine/notifications'
 import {MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
-import { SiGithub, SiTwitter, SiKofi } from "react-icons/si"
-
+import Link from "next/link"
+import {useRouter} from "next/router";
 export default function App(props: AppProps) {
     const { Component, pageProps } = props
 
@@ -27,7 +38,6 @@ export default function App(props: AppProps) {
 
         colorScheme === 'dark' ? bodyClass.add(className) : bodyClass.remove(className);
     }, [colorScheme, colorScheme === 'dark']);
-
     return (
         <>
             <Head>
@@ -49,7 +59,6 @@ export default function App(props: AppProps) {
                 />
 
             </Head>
-
             <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
                 <MantineProvider
                     theme={{
@@ -73,7 +82,7 @@ export default function App(props: AppProps) {
                         opened={opened}
                         onClose={() => setOpened(false)}
                         padding="xl"
-                        size="30vh"
+                        size="40vh"
                         hideCloseButton
                         noCloseOnClickOutside
                         style={{zIndex: 999}}
@@ -95,39 +104,29 @@ export default function App(props: AppProps) {
                                 <MdOutlineDarkMode style={{width: 18, height: 18}}/>
                             )}
                         </ActionIcon>
-                        <ActionIcon
-                            variant={"outline"}
-                            color={colorScheme === 'dark' ? 'dark' : 'gray'}
-                            onClick={() => {
-                                window.open('https://github.com/Conrad36')
-                            }}
-                            title={"Follow My Github"}
-                            style={{position: "absolute", bottom: '10px', left: '120px'}}
-                        >
-                            <SiGithub style={{width: 18, height: 18}}/>
-                        </ActionIcon>
-                        <ActionIcon
-                            variant={"outline"}
-                            color={colorScheme === 'dark' ? 'dark' : 'gray'}
-                            onClick={() => {
-                                window.open('https:/twitter.com/Conrad_306')
-                            }}
-                            style={{position: "absolute", bottom: '10px', left: '150px'}}
-                            title={"Follow My Twitter"}
-                        >
-                            <SiTwitter style={{width: 18, height: 18}}/>
-                        </ActionIcon>
-                        <ActionIcon
-                            variant={"outline"}
-                            color={colorScheme === 'dark' ? 'dark' : 'gray'}
-                            onClick={() => {
-                                window.open('https:/ko-fi.com/conrad306')
-                            }}
-                            style={{position: "absolute", bottom: '10px', left: '180px'}}
-                            title={"Buy Me A Coffee"}
-                        >
-                            <SiKofi style={{width: 18, height: 18}}/>
-                        </ActionIcon>
+                        <Text style={{position: "absolute", top: "40%", textAlign: "center"}}>
+                            OTHER
+                        </Text>
+                        <Group direction={"column"} style={{position: "absolute", top: "50%", margin: "0 auto", textAlign: "center"}}>
+                            <Link href={"https://github.com/Conrad36"}>
+                            <Text size="sm" style={{cursor: "pointer", borderRadius: "25px", padding: "20px", border: "1px solid" }}>
+                                Follow My Github
+                            </Text>
+                            </Link>
+                            <br />
+                            <Link href={"https://ko-fi.com/conrad306"}>
+                            <Text size="sm" style={{cursor: "pointer", borderRadius: "25px", padding: "20px", border: "1px solid" }} >
+                                Buy me a Coffee (Kofi)
+                            </Text>
+                            </Link>
+                            <br />
+                            <Link href={"https://twitter.com/Conrad_306"}>
+                            <Text size="sm" style={{cursor: "pointer", borderRadius: "25px", padding: "20px", border: "1px solid" }}>
+                                Follow My Twitter
+                            </Text>
+                            </Link>
+                            <br />
+                        </Group>
                     </Drawer>
 
                     <NotificationsProvider>
@@ -135,6 +134,7 @@ export default function App(props: AppProps) {
                     </NotificationsProvider>
                 </MantineProvider>
             </ColorSchemeProvider>
+
         </>
     )
 }

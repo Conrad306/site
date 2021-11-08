@@ -6,7 +6,7 @@ const Home: NextPage = () => {
         <div className={"flex"}>
         <Container style={{display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
             <Paper>
-                <Image src={"/pfp.png"} alt={"My Profile Picture"} width={250} height={250} style={{alignItems: "center"}}/>
+                <Image src={"/pfp.png"} alt={"My Profile Picture"} width={250} height={250} className={"justify-center align-center"}/>
                 <Title>
                     Hi, I&apos;m Conrad306.
                 </Title>

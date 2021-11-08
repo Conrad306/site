@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel": "vercel"
+    "vercel": "vercel",
+    "vercel:prod":  "vercel --prod"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
