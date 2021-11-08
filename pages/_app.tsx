@@ -10,6 +10,7 @@ import {
     ColorSchemeProvider,
     Burger,
     Text,
+    Badge,
     Group
 } from '@mantine/core'
 import { useLocalStorageValue } from '@mantine/hooks'
@@ -18,6 +19,8 @@ import { NotificationsProvider } from '@mantine/notifications'
 import {MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import Link from "next/link"
 import {useRouter} from "next/router";
+import {SiGithub, SiKofi, SiTwitter} from "react-icons/si";
+import {BsHammer, BsHouse} from "react-icons/bs";
 export default function App(props: AppProps) {
     const { Component, pageProps } = props
 
@@ -62,8 +65,8 @@ export default function App(props: AppProps) {
             <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
                 <MantineProvider
                     theme={{
-                        fontFamilyMonospace: 'Jetbrains Mono',
-                        fontFamily: 'Jetbrains Mono, Arial',
+                        fontFamilyMonospace: 'Monospace',
+                        fontFamily: 'Monospace',
                         colorScheme,
                         primaryColor: 'violet',
                     }}
@@ -104,26 +107,42 @@ export default function App(props: AppProps) {
                                 <MdOutlineDarkMode style={{width: 18, height: 18}}/>
                             )}
                         </ActionIcon>
-                        <Text style={{position: "absolute", top: "40%", textAlign: "center"}}>
+                        <Text style={{position: "absolute", top: "30%", textAlign: "center"}}>
+                            PAGES
+                        </Text>
+                        <Group direction={"column"} style={{position: "absolute", top: "35%", margin: "0 auto", textAlign: "center"}}>
+                            <Link href={"/"}>
+                            <Badge leftSection={<BsHouse /> } style={{cursor: "pointer"}} variant="gradient" gradient={{from: "indigo", to: "purple"}}>
+                                Home
+                            </Badge>
+                            </Link>
+                            <br />
+                            <Link href={"/projects"}>
+                                <Badge leftSection={<BsHammer />} style={{cursor: "pointer"}} variant="gradient" gradient={{from: "indigo", to: "purple"}}>
+                                    Projects
+                                </Badge>
+                            </Link>
+                        </Group>
+                        <Text style={{position: "absolute", top: "45%", textAlign: "center"}}>
                             OTHER
                         </Text>
                         <Group direction={"column"} style={{position: "absolute", top: "50%", margin: "0 auto", textAlign: "center"}}>
                             <Link href={"https://github.com/Conrad36"}>
-                            <Text size="sm" style={{cursor: "pointer", borderRadius: "25px", padding: "20px", border: "1px solid" }}>
+                            <Badge leftSection={<SiGithub />} style={{cursor: "pointer"}} variant="gradient" gradient={{from: "indigo", to: "purple"}}>
                                 Follow My Github
-                            </Text>
+                            </Badge>
                             </Link>
                             <br />
-                            <Link href={"https://ko-fi.com/conrad306"}>
-                            <Text size="sm" style={{cursor: "pointer", borderRadius: "25px", padding: "20px", border: "1px solid" }} >
+                            <Link href={"https://ko-fi.com/conrad306"} >
+                            <Badge leftSection={<SiKofi />} style={{cursor: "pointer"}} variant="gradient" gradient={{from: "indigo", to: "purple"}}>
                                 Buy me a Coffee (Kofi)
-                            </Text>
+                            </Badge>
                             </Link>
                             <br />
                             <Link href={"https://twitter.com/Conrad_306"}>
-                            <Text size="sm" style={{cursor: "pointer", borderRadius: "25px", padding: "20px", border: "1px solid" }}>
+                            <Badge leftSection={<SiTwitter />} style={{cursor: "pointer"}} variant="gradient" gradient={{from: "indigo", to: "purple"}}>
                                 Follow My Twitter
-                            </Text>
+                            </Badge>
                             </Link>
                             <br />
                         </Group>
