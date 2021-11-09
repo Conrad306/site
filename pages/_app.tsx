@@ -87,7 +87,6 @@ export default function App(props: AppProps) {
                         padding="xl"
                         size="40vh"
                         hideCloseButton
-                        noCloseOnClickOutside
                         style={{zIndex: 999}}
 
                     >
