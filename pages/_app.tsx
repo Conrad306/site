@@ -82,6 +82,9 @@ export default function App(props: AppProps) {
                         style={{position: 'absolute', top: '0%', left: '0%', zIndex: 1010}}
                     />
                     <Drawer
+                        transition="slide-right"
+                        transitionDuration={150}
+                        transitionTimingFunction="ease"
                         opened={opened}
                         onClose={() => setOpened(false)}
                         padding="xl"
