@@ -110,6 +110,58 @@ const SideBarIcon = ({
   )
 }
 
+const ExternalLinkIcon = ({
+  icon,
+  href,
+  tooltip,
+  style,
+}: {
+  icon: any
+  href?: string | undefined
+  tooltip?: string | undefined
+  style?: CSSProperties | undefined
+}) => {
+  const { colorScheme } = useMantineColorScheme()
+  return href ? (
+      <Box component={'a'} href={href}>
+        {tooltip ? (
+          <Tooltip
+            className={'sidebar-icon group"'}
+            position="right"
+            placement="center"
+            gutter={25}
+            label={tooltip}
+            style={style || {}}
+            color={colorScheme === 'dark' ? 'dark' : 'gray'}
+          >
+            {icon}
+          </Tooltip>
+        ) : (
+          <div className="sidebar-icon group" style={style || {}}>
+            {icon}
+          </div>
+        )}
+      </Box>
+    </Link>
+  ) : tooltip ? (
+    <Tooltip
+      className={'sidebar-icon group"'}
+      position="right"
+      placement="center"
+      gutter={25}
+      label={tooltip}
+      color={colorScheme === 'dark' ? 'grey' : 'dark'}
+      style={style || {}}
+    >
+      {icon}
+    </Tooltip>
+  ) : (
+    <div className="sidebar-icon group" style={style || {}}>
+      {icon}
+    </div>
+  )
+}
+
 const SideBar = () => {
   return (
     <div
@@ -123,13 +175,13 @@ const SideBar = () => {
       <SecretIcon icon={<BsGift size="25" />} tooltip={'Coming Soon... :)'} />
 
       <Divider className={'sidebar-hr'} orientation={'horizontal'} />
-      <SideBarIcon icon={<SiGithub size="25" color={"000"}/>} href={'https://github.com/Conrad36'} tooltip={'Github'} />
+      <ExternalLinkIcon icon={<SiGithub size="25" color={"000"}/>} href={'https://github.com/Conrad36'} tooltip={'Github'} />
 
-      <SideBarIcon icon={<SiKofi size="25" color={"FF5E5B"}/>} href={'https://ko-fi.com/Conrad306'} tooltip={'Kofi'} />
+      <ExternalLinkIcon icon={<SiKofi size="25" color={"FF5E5B"}/>} href={'https://ko-fi.com/Conrad306'} tooltip={'Kofi'} />
 
-      <SideBarIcon icon={<SiTwitter size="25" color={"1DA1F2"}/>} href={'https://twitter.com/Conrad306'} tooltip={'Twitter'} />
+      <ExternalLinkIcon icon={<SiTwitter size="25" color={"1DA1F2"}/>} href={'https://twitter.com/Conrad306'} tooltip={'Twitter'} />
 
-      <SideBarIcon icon={<SiYoutube size="25" color={"FF0000"}/>} href={'https://www.youtube.com/channel/UCcbmqE_sPF4UkdStFhlLlOA'} tooltip={'Youtube'} />
+      <ExternalLinkIcon icon={<SiYoutube size="25" color={"FF0000"}/>} href={'https://www.youtube.com/channel/UCcbmqE_sPF4UkdStFhlLlOA'} tooltip={'Youtube'} />
 
       <Divider className={'sidebar-hr'} orientation={'horizontal'} />
 
