@@ -142,7 +142,6 @@ const ExternalLinkIcon = ({
           </div>
         )}
       </Box>
-    </Link>
   ) : tooltip ? (
     <Tooltip
       className={'sidebar-icon group"'}
