@@ -174,7 +174,7 @@ const SideBar = () => {
       <SecretIcon icon={<BsGift size="25" />} tooltip={'Coming Soon... :)'} />
 
       <Divider className={'sidebar-hr'} orientation={'horizontal'} />
-      <ExternalLinkIcon icon={<SiGithub size="25" color={"000"}/>} href={'https://github.com/Conrad36'} tooltip={'Github'} />
+      <ExternalLinkIcon icon={<SiGithub size="25" color={"000"}/>} href={'https://github.com/Conrad306'} tooltip={'Github'} />
 
       <ExternalLinkIcon icon={<SiKofi size="25" color={"FF5E5B"}/>} href={'https://ko-fi.com/Conrad306'} tooltip={'Kofi'} />
 
