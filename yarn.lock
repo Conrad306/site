@@ -219,6 +219,11 @@
     react-popper "^2.2.5"
     react-textarea-autosize "^8.3.2"
 
+"@mantine/eslint-config@^3.6.13":
+  version "3.6.13"
+  resolved "https://registry.yarnpkg.com/@mantine/eslint-config/-/eslint-config-3.6.13.tgz#7096f7438beb78f58a54a272eeef83cb6e865bd9"
+  integrity sha512-IXg4bDBef0wpNjWqnml6sQ3jPF+m9LShbFM0cLORGJQX4OYHFsWAWtkq4qYZEWJHm9eWyErya58V06WlI85A8w==
+
 "@mantine/hooks@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-3.1.0.tgz#4a3d541ab030716d566e88f88596c1fa44210cf8"

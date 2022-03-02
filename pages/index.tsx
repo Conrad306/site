@@ -1,7 +1,7 @@
 import { Container, Paper, Text, Title, List} from "@mantine/core"
 import { NextPage } from "next";
 import Image from 'next/image';
-const Home: NextPage = () => {
+const LandingPage: NextPage = () => {
     return (
         <Container style={{display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
           <Paper>
@@ -35,4 +35,4 @@ const Home: NextPage = () => {
 }
 
 
-export default Home;
+export default LandingPage;

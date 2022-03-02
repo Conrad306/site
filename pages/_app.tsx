@@ -17,7 +17,7 @@ import { useLocalStorageValue } from '@mantine/hooks'
 import { useEffect, useState } from 'react'
 import { NotificationsProvider } from '@mantine/notifications'
 import "../styles/globals.css"
-import Sidebar from "../components/Sidebar/sidebar"
+import Sidebar from "../components/Sidebar/index";
 export default function App(props: AppProps) {
     const { Component, pageProps } = props
 
@@ -62,8 +62,6 @@ export default function App(props: AppProps) {
             <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
                 <MantineProvider
                     theme={{
-                        fontFamilyMonospace: 'Monospace',
-                        fontFamily: 'Monospace',
                         colorScheme,
                         primaryColor: 'violet',
                     }}
