@@ -1,11 +1,11 @@
 import { NextPage } from "next";
-import {Container, Title, Accordion, Button } from "@mantine/core";
+import {Container, Title, Text, Accordion, Button } from "@mantine/core";
 import Link from "next/link";
 const Projects: NextPage = () => {
     return (
         <Container>
            <Title order={2} className={"text-center"}>
-               PROJECTS
+               Projects
            </Title>
 
             <br />
@@ -35,7 +35,6 @@ const Projects: NextPage = () => {
                         <Button component="a" href="https://github.com/conrad36/site"> Check out the project! </Button>
                     </Accordion.Item>
                </Accordion>
-            
                    
         </Container>
     )

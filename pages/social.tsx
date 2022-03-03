@@ -9,10 +9,9 @@ export default function SocialPage () {
                 <Title order={2}>Social</Title>
                 <Text>Here&apos;s where you can find some other sites I&apos;m on.</Text>
                 <br />
-               <div>
-               <Group spacing={"xs"} direction="row" className={"justify-center text-center"}>
+               <Group spacing={"xs"} direction="row" className={"justify-center"}>
                    <Link href="https://ko-fi.com/Conrad306" passHref>
-                    <Card padding="lg" style={{ width: 340, }}>
+                    <Card padding="lg" style={{ width: 340 }}>
                         <Card.Section>
                             <Text>Ko-Fi</Text>
                         </Card.Section>
@@ -33,8 +32,9 @@ export default function SocialPage () {
                         })}>Ko-Fi</Button>
                     </Card>
                     </Link>
+                    <Space w="xs" />
                     <Link href="https://youtube.com/channel/UCcbmqE_sPF4UkdStFhlLlOA" passHref>
-                    <Card padding="lg" style={{ width: 340, }}>
+                    <Card padding="lg" style={{ width: 340 }}>
                         <Card.Section>
                             <Text>Youtube</Text>
                         </Card.Section>
@@ -57,8 +57,9 @@ export default function SocialPage () {
                         })}>Youtube</Button>
                     </Card>
                     </Link>
+                    <Space w="xs" />
                     <Link href="https://github.com/Conrad306" passHref >
-                    <Card padding="lg" style={{ width: 340, }}>
+                    <Card padding="lg" style={{ width: 340 }}>
                         <Card.Section>
                             <Text>Github</Text>
                         </Card.Section>
@@ -78,11 +79,12 @@ export default function SocialPage () {
                         })}>Github</Button>
                     </Card>
                     </Link>
+                    <Space w="xs" />
                    </Group>
-                   <Space h='xs'/>
+                   <Space h='xl'/>
                    <Group spacing={"xs"} direction="row" className={"justify-center text-center"}>
                    <Link href="https://www.twitch.tv/Conrad_306" passHref>
-                   <Card padding="lg" style={{ width: 340, }}>
+                   <Card padding="lg" style={{ width: 340 }}>
                         <Card.Section>
                             <Text>Twitch</Text>
                         </Card.Section>
@@ -103,8 +105,9 @@ export default function SocialPage () {
                         })}>Twitch</Button>
                     </Card>
                     </Link>
+                    <Space w="xs" />
                     <Link href="https://discord.com/users/403668506287144981" passHref>
-                    <Card padding="lg" style={{ width: 340, }}>
+                    <Card padding="lg" style={{ width: 340 }}>
                         <Card.Section>
                             <Text>Discord</Text>
                         </Card.Section>
@@ -126,7 +129,6 @@ export default function SocialPage () {
                     </Card>
                     </Link>
                    </Group> 
-               </div>
            </Paper>
         </>
     )

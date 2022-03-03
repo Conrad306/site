@@ -34,6 +34,7 @@ const Sidebar = () => {
              <Link href="/projects" passHref><Button component="a" variant="outline" className={"resize-none"} color="blue">Projects</Button></Link>
              <Space h="lg"/>
              <Link href="/social" passHref><Button component="a" variant="outline" className={"resize-none"} color="blue">Social</Button></Link>
+             
             </Drawer>
         </div>
     )
