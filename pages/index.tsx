@@ -25,7 +25,7 @@ const LandingPage: NextPage = () => {
                 <Text>
                     Email me at - conrad36github@gmail.com
                     <br/>
-                    DM me on twitter - @Conrad_306
+                    DM me on twitter - @Conrad306
                     <br/>
                     DM me on Discord - Conrad306#9712
                 </Text>
